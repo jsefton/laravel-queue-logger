@@ -1,0 +1,35 @@
+{
+  "name": "jsefton/laravel-queue-logger",
+  "type": "library",
+  "description": "Creates log of jobs being processed from the queue",
+  "keywords": ["laravel","queue","log","audit"],
+  "homepage": "https://endor.digital",
+  "license": "MIT",
+  "repositories":[],
+  "require": {
+      "laravel/framework": ">=7.0"
+  },
+  "archive": {
+    "exclude": [
+      "/tests",
+      "tests",
+      "tests/*.*",
+      "phpunit.xml",
+      ".gitignore",
+      ".gitattributes",
+      "README.md"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "JSefton\\QueueLogger\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JSefton\\QueueLogger\\QueueLoggerServiceProvider"
+      ]
+    }
+  }
+}
