@@ -27,8 +27,8 @@ class QueueLoggerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (is_dir(__DIR__.'/migrations')) {
-            $this->loadMigrationsFrom(__DIR__ . '/migrations');
+        if (is_dir(__DIR__.'/../migrations')) {
+            $this->loadMigrationsFrom(__DIR__ . '/../migrations');
         }
 
         Queue::before(function (JobProcessing $event) {
